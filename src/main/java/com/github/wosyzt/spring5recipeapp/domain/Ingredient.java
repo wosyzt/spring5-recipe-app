@@ -1,13 +1,13 @@
 package com.github.wosyzt.spring5recipeapp.domain;
 
-import lombok.Data;
-import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.Setter;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
 
-@Data
-@EqualsAndHashCode(exclude = {"recipe"})
+@Getter
+@Setter
 @Entity
 public class Ingredient {
     @Id
@@ -31,5 +31,8 @@ public class Ingredient {
         this.unitOfMeasure = unitOfMeasure;
     }
 
-
+    @Override
+    public String toString() {
+        return String.format("%d %s of %s", amount.intValue(), unitOfMeasure.getDescription(), description);
+    }
 }

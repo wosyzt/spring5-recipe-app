@@ -1,13 +1,13 @@
 package com.github.wosyzt.spring5recipeapp.domain;
 
-import lombok.Data;
-import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.Setter;
 
 import javax.persistence.*;
 
 
-@Data
-@EqualsAndHashCode(exclude = {"recipe"})
+@Getter
+@Setter
 @Entity
 public class Notes {
     @Id

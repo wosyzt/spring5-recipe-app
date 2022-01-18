@@ -1,12 +1,16 @@
 package com.github.wosyzt.spring5recipeapp.domain;
 
-import lombok.Data;
+import lombok.*;
 
 import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
 
-@Data
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 @Entity
 public class Recipe {
     @Id
