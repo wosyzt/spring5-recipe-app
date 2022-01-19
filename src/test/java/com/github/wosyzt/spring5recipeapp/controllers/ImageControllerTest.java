@@ -35,6 +35,7 @@ public class ImageControllerTest {
 
     @BeforeEach
     void setUp() {
+        
         imageController = new ImageController(imageService, recipeService);
         mockMvc = MockMvcBuilders.standaloneSetup(imageController)
                 .setControllerAdvice(ControllerExceptionHandler.class)
